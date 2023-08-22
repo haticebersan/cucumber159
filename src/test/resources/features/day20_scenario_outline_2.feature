@@ -14,8 +14,16 @@ Feature: data_table_creation
     And user enters start date as "<start_date>"
     And user enters salary as "<salary>"
     And user clicks on create button
+    Then user searches for the firstname "<first_name>"
+    And verify the name field contains the firstname "<first_name>"
+    And verify the name field contains the lastname "<last_name>"
+    And verify the position field contains the position "<position>"
     Then close the application
+
     Examples:
-      | first_name | last_name | position | office | extension | start_date | salary |
-      | John       | Doe       | QA       | NY     | 123       | 2023-08-15 | 10000  |
-      | Mary       | Foe       | Manager  | LA     | 555       | 2021-08-15 | 30000  |
+      | first_name | last_name | position | office | extension | start_date | salary  |
+      | John       | Doe       | QA       | NY     | 123       | 2023-08-15 | 10000   |
+      | Mary       | Foe       | Manager  | LA     | 555       | 2021-08-15 | 30000   |
+      | Jim        | cam       | qa       | AR     | 23462     | 2022-10-12 | 7890006 |
+      | Betty      | york      | lawyer   | NY     | 5613      | 2022-10-13 | 6100000 |
+      | Sue        | Lui       | dev      | CA     | 400       | 2022-10-14 | 100000  |
